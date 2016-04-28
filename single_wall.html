@@ -41,21 +41,28 @@
 
 	<link rel="stylesheet" href="OpenLayers3/css/ol.css" type="text/css">
 
-	<style type="text/css">
+	<style type="text/css">	
+
+		.metro .tile.half {
+		    width: 40px;
+		    height: 40px;
+		}	
+
+
 		#features-border{
 			border-bottom: solid;
 			border-bottom-color: lightgrey;
 			border-width: thin;
 			overflow: auto;
-			height: 15em;
-			width: 214px;
-			padding-left: 2px;
+			height: 12em;
+			width: 175px;
+			padding-left: 7px;
+			padding-top:2px;
 		}
-
+/*
 		#features-list{
 			height: 15em;
-			width: 196px;
-		}
+		}*/
 
 		.map {
 			padding-top: 5px;
@@ -265,7 +272,7 @@
 
 			<!-- This will be a scroll view -->
 			<div id="features-border">
-			<div id="features-list">
+			<div id="features-list">				
 				<div class="tile half" onclick="showName(this)" value="Incised-lines"><img src="https://raw.githubusercontent.com/unmil/OpenHeritageConservation/master/images/icons/incised-lines-glyph.gif"></div>
 				<div class="tile half" onclick="showName(this)" value="Charcoal-Pigment"><img src="https://raw.githubusercontent.com/unmil/OpenHeritageConservation/master/images/icons/charcoal-pigment-glyph.gif"></div>
 				<div class="tile half" onclick="showName(this)" value="Blue-Azurite-Pigment"><img src="https://raw.githubusercontent.com/unmil/OpenHeritageConservation/master/images/icons/blue-azurite-pigment.gif"></div>
@@ -326,17 +333,27 @@
 			<div id="files" class="files"></div>
 			<br>
 			<lable>Created at</lable>
-			<div class="input-control text" data-role="datepicker" data-date="1900-11-01" data-format="mm/dd/yyyy" data-position="top|bottom" data-effect="none|slide|fade" style="width: 60%">
+
+			<!-- <div class="input-control text" data-role="datepicker" data-date="1900-11-01" data-format="mm/dd/yyyy" data-position="top|bottom" data-effect="none|slide|fade" style="width: 60%">
 				<input type="text" id="initialDate">	<span class="btn-date"></span>
+			</div> -->
+
+			<div class="input-control text" style="width: 60%" >
+    			<input type="text" placeholder="mm/dd/yyyy">
 			</div>
+
 			<lable>Found at</lable>
-			<div class="input-control text" data-role="datepicker" data-date="2014-11-01" data-format="mm/dd/yyyy" data-position="top|bottom" data-effect="none|slide|fade" style="width: 60%">
-				<input type="text" id="foundDate"><span class="btn-date"></span>
+			<div class="input-control text" style="width: 60%">
+    			<input type="text" placeholder="mm/dd/yyyy">
 			</div>
+
+			<!-- <div class="input-control text" data-role="datepicker" data-date="2014-11-01" data-format="mm/dd/yyyy" data-position="top|bottom" data-effect="none|slide|fade" style="width: 60%">
+				<input type="text" id="foundDate"><span class="btn-date"></span>
+			</div> -->
 			<label>Notes</label>
 			<div class="input-control textarea success-state " data-role="input-control">
 				<textarea id="note"></textarea>
-				<a href="#"><label style="text-align: center;">Additioanl File</label></a>
+				<!-- <a href="#"><label style="text-align: center;">Additioanl File</label></a> -->
 			</div>
 			<!-- <a href="#" class="button" id="yes" style="background-color: #247b04;color: white;">Submit</a> -->
 			<div style="text-align:center;"><a href="#" class="button" id="yes" style="width:100px; height:50px; line-height: 40px;">Submit</a></div>
